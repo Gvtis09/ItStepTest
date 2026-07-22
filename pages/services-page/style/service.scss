@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
+
+// Variables
+$bg: #0a0a0a;
+$bg-2: #0e0e0e;
+$line: rgba(255, 255, 255, .14);
+$white: #f5f4f1;
+$muted: #c9c7c1;
+$orange: #c17d3f;
+$blk: #000;
+
+
+$font-serif: 'Player Display', serif;
+$font-sans: 'Poppins', sans-serif;
+
+$container-max: 1400px;
+$gap-lg: 80px;
+$gap-md: 60px;
+$gap-sm: 24px;
+
+$breakpoint-tablet: 900px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: $white;
+    font-family: $font-sans;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+// Header 
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    padding: 24px 70px;
+    .nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        .logo-img {
+            width: 15rem;
+            height: 63px;
+        }
+        .hed-link {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            .link {
+                color: $white;
+                text-decoration: none;
+                font-size: 17px;
+                margin-left: 45px;
+                &.link-active {
+                    text-decoration: underline;
+                    text-underline-offset: .7px;
+                    text-decoration-thickness: 1px;
+                }
+                &:hover {
+                    text-decoration: underline;
+
+                }
+            }
+        }
+    }
+}
+
+#burger-toggle {
+    display: none;
+}
+
+.burger {
+    display: none;
+    width: 35px;
+    cursor: pointer;
+    z-index: 10;
+    span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: $white;
+        margin: 7px 0;
+        transition: .3s;
+    }
+}
+// Responsive Header
+
+@media ( max-width: 1024px ) {
+    .header {
+        padding: 20px 30px;
+        .nav-link {
+            .logo-img {
+                width: 11rem;
+                height: auto;
+            }
+            .hed-link {
+                gap: 15px;
+                .link {
+                    font-size: 15px;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+
