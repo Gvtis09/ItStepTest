@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Civil Engineering Consultants</title>
+    <!-- SEO -->
+    <meta name="description" content="This is a Engineering web page">
+    <meta name="keywords" content="HTML, SCSS">
+    <meta name="author" content="ჯიმი ღვთისავრიშვილი">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+            <nav class="nav-link">
+                <div class="logo">
+                    <a href="#"><img src="./img/EGKlogo.png" alt="EGK LOGO" class="logo-img"></a>
+                </div>
+                <ul class="hed-link">
+                    <li><a href="#" class="link link-active">Home</a></li>
+                    <li><a href="./pages/about-page/about.html" class="link">About Us</a></li>
+                    <li><a href="#" class="link">Services</a></li>
+                    <li><a href="#" class="link">Projects</a></li>
+                    <li><a href="#" class="link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    <!-- F-r Section --> 
+    <section class="fs-sec">
+        <img src="./img/pagefs.avif" alt="for-page" class="fs-sec-img">
+        <div class="fs-overlay"></div>
+        <div class="fs-content">
+            <p class="fs-subtitle">Helping you build better tomorrow</p>
+            <h1 class="fs-title">Construction Management and Civil Engineering Consultants</h1>
+        </div>
+        <!-- Meeting Sec -->
+        <div class="meeting-form-wrap">
+            <h2 class="meeting-title">Set an introduction meeting today</h2>
+            <form class="meeting-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fname">First Name*</label>
+                    <input type="text" id="fname" required>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name*</label>
+                    <input type="text" id="lname" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <div class="phone-input">
+                <select class="country-code" id="country-code">
+                    <option value="GLOBAL"><svg viewBox="0 0 24 24" fill="#000" width="24" height="24"><path fill-rule="evenodd" d="M11.5,19 C11.331,19 11.166,18.985 11,18.975 L11,16.5 C11,16.224 10.776,16 10.5,16 L9.5,16 C9.224,16 9,15.775 9,15.5 L9,12.5 C9,12.366 8.947,12.238 8.852,12.145 L4.804,8.14 C6.04,5.688 8.573,4 11.5,4 C12.76,4 13.946,4.315 14.989,4.866 L15,6.497 C15.001,6.631 14.949,6.757 14.855,6.853 C14.76,6.947 14.634,7 14.5,7 L12.339,7 C12.207,7 12.08,7.053 11.986,7.146 L10.146,8.983 C10.053,9.077 10,9.204 10,9.337 L10,10.5 C10,11.325 10.672,11.999 11.499,12 L15.293,12 L17,13.707 L17,16.582 C15.629,18.064 13.674,19 11.5,19 M4,11.5 C4,10.673 4.14,9.879 4.388,9.135 L8,12.709 L8,15.5 C8,16.327 8.673,17 9.5,17 L10,17 L10,18.849 C6.581,18.152 4,15.122 4,11.5 M19,11.5 C19,12.856 18.632,14.127 18,15.226 L18,13.5 C18,13.367 17.947,13.24 17.854,13.146 L15.854,11.146 C15.76,11.053 15.633,11 15.5,11 L11.5,11 C11.224,11 11,10.775 11,10.5 L11,9.544 L12.546,8 L14.5,8 C14.902,8 15.281,7.843 15.564,7.557 C15.848,7.271 16.003,6.892 16,6.49 L15.993,5.51 C17.814,6.879 19,9.051 19,11.5 M11.5,3 C6.813,3 3,6.813 3,11.5 C3,16.187 6.813,20 11.5,20 C16.187,20 20,16.187 20,11.5 C20,6.813 16.187,3 11.5,3"></path></svg></option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BR">Brazil</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="CA">Canada</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CO">Colombia</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CU">Cuba</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="CZ">Czech Republic</option>
+                    <option value="DK">Denmark</option>
+                    <option value="EG">Egypt</option>
+                    <option value="EE">Estonia</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Germany</option>
+                    <option value="GR">Greece</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IT">Italy</option>
+                    <option value="JP">Japan</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MX">Mexico</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NO">Norway</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="RO">Romania</option>
+                    <option value="RS">Serbia</option>
+                    <option value="ES">Spain</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="TR">Turkey</option>
+        </select>
+                        <input type="tel" id="phone">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"></div>
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-top">
+            <div class="unnamed">
+                <div class="eyebrow">About Us</div>
+                <div class="arrow">
+                <svg aria-label="" role="presentation" aria-hidden="true" preserveAspectRatio="xMidYMid meet" data-type="shape" viewBox="19.588 20.146 159.561 159.541" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" data-bbox="19.588 20.146 159.561 159.541"><g class="_svgImageSource_15k1w_1" data-type="shape"><g>
+            <path d="M170.281 20.146v144.371L25.892 20.16l-6.27 6.268 144.421 144.393H19.588v8.866h159.561V20.146h-8.868z"></path>
+            </g></g></svg></svg>
+            </div>
+            </div>
+            <p class="headline">At EGK, we simplify <br> construction processes to <br> increase you project <br> velocity. </p>
+        </div>
+
+        <div class="team">
+            <div class="member">
+                <div class="photo"><img src="./img/man1.png" alt="Photo"></div>
+                <div class="name">Eli Glickman</div>
+                <div class="role">Senior Consultant &amp; Partner</div>
+            </div>
+            <div class="member">
+                <div class="photo"><img src="./img/woman.png" alt="Photo"></div>
+                <div class="name">NORAH EMERSON</div>
+                <div class="role">Senior Consultant &amp; Partner</div>
+            </div>
+            <div class="member">            <div class="photo"><img src="./img/Man Wearing Glasses.png" alt="Photo"></div>
+                <div class="name">ADAM CHO</div>
+                <div class="role">Senior Consultant &amp; Partner</div>
+                </div>
+        </div>
+        </div>
+        </div>
+        <div class="about-us-btn">
+            <a href="#" class="us-btn">Learn More About Us</a>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section class="prj">
+        <!-- Hed -->
+        <div class="r0w">
+            <div class="r0w-left">
+                <span class="r0w-label">WHAT WE CAN DO FOR YOU</span>
+                <svg class="arrow-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="10,10 90,90" stroke="white" stroke-width="2" fill="none"/>
+                <polyline points="90,40 90,90 40,90" stroke="white" stroke-width="2" fill="none"/>
+                </svg>
+            </div>
+            <div class="r0w-right">
+                <h2>Providing engineering<br>consulting solutions </h2>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="prjcont">
+            <div class="cell-1">MANAGEMENT AND SUPERVISION</div>
+        <div class="cell-1">STRUCTURAL ENGINEERING</div>
+        <div class="cell-1">TRANSPORT AND HIGHWAY ENGINEERING</div>
+        <div class="cell-1 img-cell-1">
+            <img src="../../img/city.png" alt="CityImg-Cell-1">
+        </div>
+        <div class="cell-1">PROJECT SCHEDULING</div>
+        <div class="cell-1">QUALITY ASSURANCE</div>                                     
+        </div>
+        <a href="#" class="read-more-btn">Read More</a>
+    </section>
+
+    <!-- Featured Project -->
+    <section class="featured">
+        <div class="featured-top">
+            <div class="featured-left">
+                <span class="span-class">Featured Projects</span>
+                <div class="arrow">
+                <svg aria-hidden="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="10,10 90,90" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <polyline points="90,40 90,90 40,90" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                </div>
+            </div>
+            <div class="featured-right">
+                <h2 class="headline">Every project has its<br> unique DNA</h2>
+            </div>
+        </div>
+        <!-- Featured Grid -->
+        <div class="featured-grid">
+            <div class="f-card f-card--tall">
+                <div class="f-img-wrap">
+                <img src="./img/MOLLINS MUSEUM, CA.avif" alt="Museum">
+                </div>
+                <h3 class="f-title">Meridian Arch, CA</h3>
+                <p class="p-text">This is the space to provide a brief overview of the image and define the qualities that make it unique</p>
+            </div>
+            <div class="f-card f-card--mid">
+                <div class="f-img-wrap">
+                <img src="./img/HILLWAY INTERCHANGE, CA.avif" alt="Museum">
+                </div>
+                <h3 class="f-title">HILLWAY INTERCHANGE, CA</h3>
+                <p class="p-text">This is the space to provide a brief overview of the image and define the qualities that make it unique.</p>
+            </div>
+            <div class="f-card f-card--short">
+                <div class="f-img-wrap">
+                <img src="./img/NOTTING FERRIES HARBOR, CA.avif" alt="Museum" class="oneofus">
+                </div>
+                <h3 class="f-title">NOTTING FERRIES HARBOR, CA</h3>
+                <p class="p-text">This is the space to provide a brief overview of the image and define the qualities that make it unique.</p>
+            </div>
+            <div class="f-card f-card--mid">
+                <div class="f-img-wrap">
+                <img src="./img/DAPHNEY BUILDING, CA.avif" alt="Museum">
+                </div>
+                <h3 class="f-title">DAPHNEY BUILDING, CA</h3>
+                <p class="p-text">This is the space to provide a brief overview of the image and define the qualities that make it unique</p>
+            </div>
+            <div class="f-card f-card--short">
+                <div class="f-img-wrap">
+                <img src="./img/VALLEY HILL CAMPUS, CA.avif" alt="Museum">
+                </div>
+                <h3 class="f-title">VALLEY HILL CAMPUS, CA</h3>
+                <p class="p-text">This is the space to provide a brief overview of the image and define the qualities that make it unique</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Section -->
+    <section class="clients">
+        <div class="clients-top">
+            <div class="clients-left">
+                <span class="clients-eyebrow">We work with top notch clients</span>
+                <div class="clients-arrow">
+                    <svg aria-hidden="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="10,10 90,90" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <polyline points="10,90 90,90 90,10" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="clients-right">
+                <h2 class="clients-headline">Engineering who <br> understand your <br> business </h2>
+            </div>
+        </div>
+        <!-- Clients Grid -->
+        <div class="clients-grid">
+            <div class="client-cell">
+                <img src="./img/GGL.avif" alt="GGL">
+            </div>
+            <div class="client-cell">
+                <img src="./img/vall.avif" alt="VALLEY">
+            </div>
+            <div class="client-cell">
+                <img src="./img/152N.avif" alt="152">
+            </div>
+            <div class="client-cell">
+                <img src="./img/TERRANCE.avif" alt="TERRANCE">
+            </div>
+            <div class="client-cell">
+                <img src="./img/MCR.avif" alt="MCR">
+            </div>
+            <div class="client-cell">
+                <img src="./img/MOLLINSMUSEUM.avif" alt="GGL">
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-top">
+            <div class="contact-left">
+                <span class="contact-eyebrow">Contact Us</span>
+                <div class="contact-arrow">
+                    <svg aria-hidden="true" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="10,10 90,90" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <polyline points="90,40 90,90 40,90" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="contact-right">
+                <h2 class="contact-headline">Reach out with any<br> questions or inquiries </h2>
+            </div>
+        </div>
+        <form action="#" class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="c-fname">First name *</label>
+                    <input type="text" id="c-fname">
+                </div>
+                <div class="form-group">
+                    <label for="c-lname">Last name *</label>
+                    <input type="text" id="c-lname">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="c-name">Email *</label>
+                    <input type="email" id="c-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="c-phone">Phone</label>
+                    <div class="phone-input">
+                        <select name="" class="country-code" id="c-country-code">
+                            <option value="GLOBAL"><svg viewBox="0 0 24 24" fill="#000" width="24" height="24"><path fill-rule="evenodd" d="M11.5,19 C11.331,19 11.166,18.985 11,18.975 L11,16.5 C11,16.224 10.776,16 10.5,16 L9.5,16 C9.224,16 9,15.775 9,15.5 L9,12.5 C9,12.366 8.947,12.238 8.852,12.145 L4.804,8.14 C6.04,5.688 8.573,4 11.5,4 C12.76,4 13.946,4.315 14.989,4.866 L15,6.497 C15.001,6.631 14.949,6.757 14.855,6.853 C14.76,6.947 14.634,7 14.5,7 L12.339,7 C12.207,7 12.08,7.053 11.986,7.146 L10.146,8.983 C10.053,9.077 10,9.204 10,9.337 L10,10.5 C10,11.325 10.672,11.999 11.499,12 L15.293,12 L17,13.707 L17,16.582 C15.629,18.064 13.674,19 11.5,19 M4,11.5 C4,10.673 4.14,9.879 4.388,9.135 L8,12.709 L8,15.5 C8,16.327 8.673,17 9.5,17 L10,17 L10,18.849 C6.581,18.152 4,15.122 4,11.5 M19,11.5 C19,12.856 18.632,14.127 18,15.226 L18,13.5 C18,13.367 17.947,13.24 17.854,13.146 L15.854,11.146 C15.76,11.053 15.633,11 15.5,11 L11.5,11 C11.224,11 11,10.775 11,10.5 L11,9.544 L12.546,8 L14.5,8 C14.902,8 15.281,7.843 15.564,7.557 C15.848,7.271 16.003,6.892 16,6.49 L15.993,5.51 C17.814,6.879 19,9.051 19,11.5 M11.5,3 C6.813,3 3,6.813 3,11.5 C3,16.187 6.813,20 11.5,20 C16.187,20 20,16.187 20,11.5 C20,6.813 16.187,3 11.5,3"></path></svg></option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AR">Argentina</option>
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BR">Brazil</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="CA">Canada</option>
+                            <option value="CL">Chile</option>
+                            <option value="CN">China</option>
+                            <option value="CO">Colombia</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CU">Cuba</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="DK">Denmark</option>
+                            <option value="EG">Egypt</option>
+                            <option value="EE">Estonia</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="GE">Georgia</option>
+                            <option value="DE">Germany</option>
+                            <option value="GR">Greece</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IS">Iceland</option>
+                            <option value="IN">India</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IT">Italy</option>
+                            <option value="JP">Japan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KE">Kenya</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="MX">Mexico</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="NO">Norway</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="RO">Romania</option>
+                            <option value="RS">Serbia</option>
+                            <option value="ES">Spain</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="TR">Turkey</option>
+                        </select>
+                        <input type="tel" id="c-phone">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group form-group--full">
+                    <label for="c-message">Leave us a message...</label>
+                    <textarea name="" id="c-message" rows="4"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="contact-submit-btn">Submit</button>
+        </form>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="./img/EGKLOGO-BlACK.png" alt="EGK LOGO" class="footer-logo-img">
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-info">
+                <span class="footer-label">Address</span>
+                <p class="footer-text">500 Terry Francine Street<br>San Francisco, CA 94158</p>
+            </div>
+            <div class="footer-info">
+                <span class="footer-label">Phone</span>
+                <p class="footer-text">123-456-7890</p>
+            </div>
+            <div class="footer-info">
+                <span class="footer-label">Email</span>
+                <p class="footer-text">info@mysite.com</p>
+            </div>
+            <div class="footer-info">
+                <span class="footer-label">Socials</span>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 21v-7.5h2.5l.4-3H13.5V8.5c0-.87.24-1.46 1.49-1.46H16.5V4.35c-.26-.03-1.15-.11-2.19-.11-2.17 0-3.66 1.32-3.66 3.75V10.5H8.5v3H10.65V21h2.85z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.94 8.5H4V20h2.94V8.5zM5.47 4a1.7 1.7 0 100 3.4 1.7 1.7 0 000-3.4zM20 12.9c0-3-1.6-4.4-3.75-4.4-1.73 0-2.5.95-2.93 1.62V8.5H10.4c.04.86 0 11.5 0 11.5h2.92v-6.4c0-.34.02-.68.12-.93.28-.68.9-1.4 1.96-1.4 1.38 0 1.94 1.06 1.94 2.6V20H20v-7.1z"/></svg>
+                    </a>
+                    <a href="#" aria-label="X">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l7.1 9.5L4.3 20h1.9l6-6.4 4.6 6.4H21l-7.4-9.9L20 4h-1.9l-5.6 5.9L8.6 4H4z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Accessibility Statement</a>
+        <span class="footer-copy">© 2035 by EGK. Powered and secured by <a href="#" class="footer-link">Wix</a></span>
+    </div>
+</footer>
+</body>
+</html>
