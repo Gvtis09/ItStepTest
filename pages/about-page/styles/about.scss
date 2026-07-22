@@ -12,6 +12,7 @@ $blk: #000;
 
 $font-serif: 'Player Display', serif;
 $font-sans: 'Poppins', sans-serif;
+$georgia-fonts: "Noto Sans Georgian", sans-serif;
 
 $container-max: 1400px;
 $gap-lg: 80px;
@@ -64,7 +65,7 @@ html {
 body {
     background-color: #000;
     color: $white;
-    font-family: $font-sans;
+    font-family: $georgia-fonts;
     font-weight: 300;
     line-height: 1.6;
 }
