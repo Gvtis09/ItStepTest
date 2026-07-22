@@ -66,7 +66,7 @@ html {
   margin-left: -4px;
   font-family: "Arimo", sans-serif;
   opacity: 0;
-  animation: fadeIn 3s ease-in-out forwards;
+  animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 2s;
 }
 .fs-sec .fs-content .fs-title {
@@ -76,7 +76,7 @@ html {
   line-height: 1.2;
   max-width: 3000px;
   opacity: 0;
-  animation: fadeIn 3s ease-in-out forwards;
+  animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 2s;
 }
 .fs-sec .meeting-form-wrap {

@@ -6,12 +6,14 @@ $bg-2: #0e0e0e;
 $line: rgba(255, 255, 255, .14);
 $white: #f5f4f1;
 $muted: #c9c7c1;
-$orange: #c17d3f;
+$meeting: #af6118;
 $blk: #000;
 
 
 $font-serif: 'Player Display', serif;
 $font-sans: 'Poppins', sans-serif;
+$georgia-fonts: "Arimo", sans-serif;
+$georgiafont: "Noto Sans Georgian", sans-serif;
 
 $container-max: 1400px;
 $gap-lg: 80px;
@@ -33,7 +35,7 @@ html {
 body {
     background-color: #000;
     color: $white;
-    font-family: $font-sans;
+    font-family: $georgiafont;
     font-weight: 300;
     line-height: 1.6;
 }
@@ -47,6 +49,7 @@ body {
     width: 100%;
     z-index: 3;
     padding: 24px 70px;
+    font-family: $georgiafont;
     .nav-link {
         display: flex;
         justify-content: space-between;
@@ -118,3 +121,99 @@ body {
     }
 }
 
+// Services Section
+
+.services {
+    background-color: $bg;
+    padding: 100px 0;
+    @media ( max-width: $breakpoint-tablet ) {
+        padding: 60px 0;
+    }
+    .ser-section {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+        .services-header {
+            width: 60%;
+            @media ( max-width: 1200px ) {
+                width: 80%;
+            }
+            @media ( max-width: $breakpoint-tablet ){
+                width: 100%;
+            }
+            .services-label {
+                display: block;
+                font-size: 14px;
+                letter-spacing: 2px;
+                color: $white;
+                margin-bottom: 20px;
+                margin-left: 30px;
+                font-family: $georgia-fonts;
+                
+                @media (max-width: $breakpoint-tablet ) {
+                    margin-left: 0;
+                    font-size: 12px;
+                }
+            }
+            .services-title {
+                font-size: 59px;
+                line-height: 1.2;
+                letter-spacing: .1px;
+                color: $white;
+                font-weight: 400;
+                max-width: 530px;
+                margin-left: 40px;
+                gap: 5px;
+                font-family: $georgia-fonts;
+
+                @media ( max-width: 1200px) {
+                    font-size: 46px;
+                    max-width: 100%;
+                }
+
+                @media ( max-width: $breakpoint-tablet ) {
+                    font-size: 32px;
+                    margin-left: 0;
+                    line-height: 1.25;
+                }
+            }
+            .arrow {
+                display: inline-block;
+                width: 70px;
+                height: 40px;
+                margin-left: 40px;
+                margin-top: 50px;
+
+            }
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 60px;
+            row-gap: 80px;
+            margin-top: 50px;
+            max-width: 1100px;
+            margin-left: 40px;
+            align-items: center;
+            justify-content: center;
+            .number {
+                display: block;
+                font-family: $georgiafont;
+                font-size: 40px;
+                color: $meeting;
+                margin-top: 40px;
+            }
+            .title {
+                font-size: 15.6px;
+                margin-top: 13px;
+            }
+            .text {
+                margin-top: 25px;
+                color: #ebebebd3;
+                font-size: 14.8px;
+                max-width: 279px;
+                max-height: 50px;
+            }
+        }
+    }
+}

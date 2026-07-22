@@ -12,7 +12,7 @@ html {
 body {
   background-color: #000;
   color: #f5f4f1;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Sans Georgian", sans-serif;
   font-weight: 300;
   line-height: 1.6;
 }
@@ -24,6 +24,7 @@ body {
   width: 100%;
   z-index: 3;
   padding: 24px 70px;
+  font-family: "Noto Sans Georgian", sans-serif;
 }
 .header .nav-link {
   display: flex;
@@ -89,4 +90,107 @@ body {
     font-size: 15px;
     margin-left: 15px;
   }
+}
+.services {
+  background-color: #0a0a0a;
+  padding: 100px 0;
+}
+@media (max-width: 900px) {
+  .services {
+    padding: 60px 0;
+  }
+}
+.services .ser-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.services .ser-section .services-header {
+  width: 60%;
+}
+@media (max-width: 1200px) {
+  .services .ser-section .services-header {
+    width: 80%;
+  }
+}
+@media (max-width: 900px) {
+  .services .ser-section .services-header {
+    width: 100%;
+  }
+}
+.services .ser-section .services-header .services-label {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #f5f4f1;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  font-family: "Arimo", sans-serif;
+}
+@media (max-width: 900px) {
+  .services .ser-section .services-header .services-label {
+    margin-left: 0;
+    font-size: 12px;
+  }
+}
+.services .ser-section .services-header .services-title {
+  font-size: 59px;
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  color: #f5f4f1;
+  font-weight: 400;
+  max-width: 530px;
+  margin-left: 40px;
+  gap: 5px;
+  font-family: "Arimo", sans-serif;
+}
+@media (max-width: 1200px) {
+  .services .ser-section .services-header .services-title {
+    font-size: 46px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .services .ser-section .services-header .services-title {
+    font-size: 32px;
+    margin-left: 0;
+    line-height: 1.25;
+  }
+}
+.services .ser-section .services-header .arrow {
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+.services .ser-section .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  row-gap: 80px;
+  margin-top: 50px;
+  max-width: 1100px;
+  margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.services .ser-section .services-grid .number {
+  display: block;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-size: 40px;
+  color: #af6118;
+  margin-top: 40px;
+}
+.services .ser-section .services-grid .title {
+  font-size: 15.6px;
+  margin-top: 13px;
+}
+.services .ser-section .services-grid .text {
+  margin-top: 25px;
+  color: rgba(235, 235, 235, 0.8274509804);
+  font-size: 14.8px;
+  max-width: 279px;
+  max-height: 50px;
 }/*# sourceMappingURL=service.css.map */

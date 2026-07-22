@@ -78,7 +78,7 @@ html {
       margin-left: -4px;
       font-family: $fonts;
       opacity: 0;
-      animation: fadeIn 3s ease-in-out forwards;
+      animation: fadeIn 1s ease-in-out forwards;
       animation-delay: 2s;
     }
     .fs-title {
@@ -89,7 +89,7 @@ html {
       max-width: 3000px;
       // font-family: $fonts;
       opacity: 0;
-      animation: fadeIn 3s ease-in-out forwards;
+      animation: fadeIn 1s ease-in-out forwards;
       animation-delay: 2s;
     }
   }
