@@ -95,11 +95,6 @@ body {
   background-color: #0a0a0a;
   padding: 100px 0;
 }
-@media (max-width: 900px) {
-  .services {
-    padding: 60px 0;
-  }
-}
 .services .ser-section {
   max-width: 1400px;
   margin: 0 auto;
@@ -107,16 +102,6 @@ body {
 }
 .services .ser-section .services-header {
   width: 60%;
-}
-@media (max-width: 1200px) {
-  .services .ser-section .services-header {
-    width: 80%;
-  }
-}
-@media (max-width: 900px) {
-  .services .ser-section .services-header {
-    width: 100%;
-  }
 }
 .services .ser-section .services-header .services-label {
   display: block;
@@ -126,12 +111,6 @@ body {
   margin-bottom: 20px;
   margin-left: 30px;
   font-family: "Arimo", sans-serif;
-}
-@media (max-width: 900px) {
-  .services .ser-section .services-header .services-label {
-    margin-left: 0;
-    font-size: 12px;
-  }
 }
 .services .ser-section .services-header .services-title {
   font-size: 59px;
@@ -143,19 +122,6 @@ body {
   margin-left: 40px;
   gap: 5px;
   font-family: "Arimo", sans-serif;
-}
-@media (max-width: 1200px) {
-  .services .ser-section .services-header .services-title {
-    font-size: 46px;
-    max-width: 100%;
-  }
-}
-@media (max-width: 900px) {
-  .services .ser-section .services-header .services-title {
-    font-size: 32px;
-    margin-left: 0;
-    line-height: 1.25;
-  }
 }
 .services .ser-section .services-header .arrow {
   display: inline-block;
