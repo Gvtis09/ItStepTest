@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
 
 // Variables
+
 $bg: #0a0a0a;
 $bg-2: #0e0e0e;
 $line: rgba(255, 255, 255, .14);
 $white: #f5f4f1;
 $muted: #c9c7c1;
-$meeting: #af6118;
+$orange: #c17d3f;
 $blk: #000;
-
 
 $font-serif: 'Player Display', serif;
 $font-sans: 'Poppins', sans-serif;
 $georgia-fonts: "Arimo", sans-serif;
 $georgiafont: "Noto Sans Georgian", sans-serif;
+$project-fonts: "Merriweather", serif;
 
 $container-max: 1400px;
 $gap-lg: 80px;
@@ -21,6 +22,42 @@ $gap-md: 60px;
 $gap-sm: 24px;
 
 $breakpoint-tablet: 900px;
+
+// Root 
+:root {
+    --line: #111111
+}
+
+// Mixins
+
+@mixin eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: $white;
+    text-transform: uppercase;
+}
+
+@mixin body-copy ( $color: $muted ) {
+    font-size: 15px;
+    color: $color;
+    font-weight: 300;
+}
+
+@mixin flex-col( $gap: 0 ) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin respond-to( $breakpoint ) {
+    @media ( max-width: $breakpoint ) {
+        @content;
+    }
+}
+
+
+// Reset
 
 * {
     margin: 0;
@@ -35,13 +72,30 @@ html {
 body {
     background-color: #000;
     color: $white;
-    font-family: $georgiafont;
+    font-family: $project-fonts;
     font-weight: 300;
     line-height: 1.6;
 }
 
-// Header 
+.serif {
+    font-family: $font-serif;
+    margin: 0 auto;
+}
 
+.wrap {
+    max-width: $container-max;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    @include eyebrow;
+    &.orange {
+        color: $orange;
+        letter-spacing: 1px;
+    }
+}
+
+// Header
 .header {
     position: fixed;
     top: 0;
@@ -269,193 +323,46 @@ body {
     }
 }
 
-// Responsive Header
+// Title Text
 
-@media ( max-width: 1024px ) {
-    .header {
-        padding: 20px 30px;
-        .nav-link {
-            .logo-img {
-                width: 11rem;
-                height: auto;
-            }
-            .hed-link {
-                gap: 15px;
-                .link {
-                    font-size: 15px;
-                    margin-left: 15px;
-                }
-            }
-        }
-    }
-}
-
-// Services Section
-
-.services {
-    background-color: $bg;
-    padding: 100px 0;
-    .ser-section {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 20px;
-        .services-header {
-            width: 60%;
-            .services-label {
-                display: block;
-                font-size: 14px;
-                letter-spacing: 2px;
-                color: $white;
-                margin-bottom: 20px;
-                margin-left: 30px;
-                font-family: $georgia-fonts;
-            }
-            .services-title {
-                font-size: 59px;
-                line-height: 1.2;
-                letter-spacing: .1px;
-                color: $white;
-                font-weight: 400;
-                max-width: 530px;
-                margin-left: 40px;
-                gap: 5px;
-                font-family: $georgia-fonts;
-            }
-            .arrow {
-                display: inline-block;
-                width: 70px;
-                height: 40px;
-                margin-left: 40px;
-                margin-top: 50px;
-            }
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: 60px;
-            row-gap: 80px;
-            margin-top: 50px;
-            max-width: 1100px;
-            margin-left: 40px;
-            align-items: center;
-            justify-content: center;
-            .number {
-                display: block;
-                font-family: $georgiafont;
-                font-size: 40px;
-                color: $meeting;
-                margin-top: 40px;
-            }
-            .title {
-                font-size: 15.6px;
-                margin-top: 13px;
-            }
-            .text {
-                margin-top: 25px;
-                color: #ebebebd3;
-                font-size: 14.8px;
-                max-width: 279px;
-                max-height: 50px;
-            }
-        }
-    }
-}
-
-// Service Section - Responsive-ს ვერ ვაკეთებ (Myb Bugs 
-
-
-// IMG SECTION
-.img-sec {
-    position: relative;
-    background: url('../../../img/sectionbg.avif');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 500px;
+.privacy-policy {
+    width: 100%;
     display: flex;
-    align-items: center;
-    padding: 150px 0;
-    .img-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, .45);
-        z-index: 1;
-    }
-    .img-content {
-        position: relative;
-        z-index: 2;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 20px;
-        .img-text {
-            font-family: $georgiafont;
-            font-size: 42px;
-            line-height: 1.4;
-            font-weight: 400;
-            color: $white;
-            max-width: 900px;
-            margin-bottom: 30px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 47vh 0 30px 20px;
+    .own-policy {
+        padding: 0vh 0 0 12vh;
+        .title-policy {
+            font-size: 30px;
+            line-height: 1.2;
+            letter-spacing: .1em;
+            font-family: $project-fonts;
         }
-        .quote-author {
-            display: block;
-            font-family: $georgiafont;
+        .main-title {
+            margin-top: 10vh;
+            font-size: 21px;
+            color: #fdfdfd;
+            letter-spacing: .05em;
+        }
+        .last-title {
+            margin-top: 5vh;
+            color: #dedede;
             font-size: 14px;
-            letter-spacing: 2px;
-            color: $white;
-            font-style: normal;
-            text-transform: uppercase;
+            max-width: 49em;
+            font-style: bolder;
+        }
+        .text-href {
+            color: #fdfdfd;
         }
     }
 }
 
-// Img Section Responsive
-
-@media ( max-width: 1200px ) {
-    .img-sec {
-        padding: 100px 0;
-    }
-    .img-content .img-text {
-        font-size: 34px;
-        max-width: 700px;
-    }
-}
-
-@media ( max-width: $breakpoint-tablet ) {
-    .img-sec {
-        padding: 70px 0;
-        min-height: 400px;
-        background-attachment: scroll;
-    }
-    .img-content .img-text {
-        font-size: 24px;
-        line-height: 1.5;
-        max-width: 100%;
-    }
-    .img-content .quote-author {
-        font-size: 12px;
-    }
-}
-
-@media ( max-width: 480px ) {
-    .img-sec {
-        padding: 50px 0 ;
-        min-height: 350px;
-    }
-    .img-content .quote-author {
-        font-size: 20px;
-    }
-}
-
-// Footer
 .footer {
     background-color: #fff;
     color: $blk;
     padding: 60px 24px 30px;
-    border-top: 1px solid $line;
-
+    border-top: 1px solid var(--line);
     .footer-top {
         max-width: 1200px;
         margin: 0 auto;
@@ -472,12 +379,7 @@ body {
                 height: auto;
                 display: block;
             }
-
-            .footer-tagline {
-                margin-top: 8px;
-                font-size: 14px;
-                color: $blk;
-            }
+            
         }
 
         .footer-links {
@@ -489,24 +391,17 @@ body {
         .footer-info {
             .footer-label {
                 display: block;
-                font-family: $font-sans;
+                font-family: $georgia-fonts;
                 font-size: 13px;
                 font-weight: 700;
-                letter-spacing: 0.08em;
+                letter-spacing: .08em;
                 text-transform: uppercase;
                 margin-bottom: 16px;
             }
-
-            .footer-text {
-                font-size: 14px;
-                line-height: 1.6;
-                color: $blk;
-            }
-
+            
             .footer-socials {
                 display: flex;
                 gap: 10px;
-
                 a {
                     display: flex;
                     align-items: center;
@@ -516,8 +411,8 @@ body {
                     border-radius: 100%;
                     background: #000;
                     color: #fff;
-                    transition: opacity 0.2s ease;
-
+                    transition: opacity .2s ease;
+                    
                     svg {
                         width: 15px;
                         height: 15px;
@@ -527,7 +422,6 @@ body {
             }
         }
     }
-
     .footer-bottom {
         max-width: 1200px;
         margin: 0 auto;
@@ -535,7 +429,7 @@ body {
         align-items: center;
         gap: 40px;
         padding-top: 26px;
-        border-top: 1px solid $blk;
+        border-top: -1px solid $blk;
         flex-wrap: wrap;
 
         .footer-link {
@@ -558,6 +452,8 @@ body {
     }
 }
 
+// Responsive Footer 
+
 @media (max-width: 1024px) {
     .footer {
         .footer-top {
@@ -578,7 +474,6 @@ body {
                 gap: 30px;
             }
         }
-
         .footer-bottom {
             .footer-copy {
                 margin-left: 0;
@@ -588,7 +483,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media ( max-width: 480px ) {
     .footer {
         .footer-top {
             .footer-links {

@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
+:root {
+  --line: #111111 ;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +16,31 @@ html {
 body {
   background-color: #000;
   color: #f5f4f1;
-  font-family: "Noto Sans Georgian", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: 300;
   line-height: 1.6;
+}
+
+.serif {
+  font-family: "Player Display", serif;
+  margin: 0 auto;
+}
+
+.wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #f5f4f1;
+  text-transform: uppercase;
+}
+.eyebrow.orange {
+  color: #c17d3f;
+  letter-spacing: 1px;
 }
 
 .header {
@@ -193,176 +219,44 @@ body {
     margin: 5px 0;
   }
 }
-@media (max-width: 1024px) {
-  .header {
-    padding: 20px 30px;
-  }
-  .header .nav-link .logo-img {
-    width: 11rem;
-    height: auto;
-  }
-  .header .nav-link .hed-link {
-    gap: 15px;
-  }
-  .header .nav-link .hed-link .link {
-    font-size: 15px;
-    margin-left: 15px;
-  }
-}
-.services {
-  background-color: #0a0a0a;
-  padding: 100px 0;
-}
-.services .ser-section {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.services .ser-section .services-header {
-  width: 60%;
-}
-.services .ser-section .services-header .services-label {
-  display: block;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #f5f4f1;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  font-family: "Arimo", sans-serif;
-}
-.services .ser-section .services-header .services-title {
-  font-size: 59px;
-  line-height: 1.2;
-  letter-spacing: 0.1px;
-  color: #f5f4f1;
-  font-weight: 400;
-  max-width: 530px;
-  margin-left: 40px;
-  gap: 5px;
-  font-family: "Arimo", sans-serif;
-}
-.services .ser-section .services-header .arrow {
-  display: inline-block;
-  width: 70px;
-  height: 40px;
-  margin-left: 40px;
-  margin-top: 50px;
-}
-.services .ser-section .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 60px;
-       column-gap: 60px;
-  row-gap: 80px;
-  margin-top: 50px;
-  max-width: 1100px;
-  margin-left: 40px;
-  align-items: center;
-  justify-content: center;
-}
-.services .ser-section .services-grid .number {
-  display: block;
-  font-family: "Noto Sans Georgian", sans-serif;
-  font-size: 40px;
-  color: #af6118;
-  margin-top: 40px;
-}
-.services .ser-section .services-grid .title {
-  font-size: 15.6px;
-  margin-top: 13px;
-}
-.services .ser-section .services-grid .text {
-  margin-top: 25px;
-  color: rgba(235, 235, 235, 0.8274509804);
-  font-size: 14.8px;
-  max-width: 279px;
-  max-height: 50px;
-}
-
-.img-sec {
-  position: relative;
-  background: url("../../../img/sectionbg.avif");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  padding: 150px 0;
-}
-.img-sec .img-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.privacy-policy {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 47vh 0 30px 20px;
 }
-.img-sec .img-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
+.privacy-policy .own-policy {
+  padding: 0vh 0 0 12vh;
 }
-.img-sec .img-content .img-text {
-  font-family: "Noto Sans Georgian", sans-serif;
-  font-size: 42px;
-  line-height: 1.4;
-  font-weight: 400;
-  color: #f5f4f1;
-  max-width: 900px;
-  margin-bottom: 30px;
+.privacy-policy .own-policy .title-policy {
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  font-family: "Merriweather", serif;
 }
-.img-sec .img-content .quote-author {
-  display: block;
-  font-family: "Noto Sans Georgian", sans-serif;
+.privacy-policy .own-policy .main-title {
+  margin-top: 10vh;
+  font-size: 21px;
+  color: #fdfdfd;
+  letter-spacing: 0.05em;
+}
+.privacy-policy .own-policy .last-title {
+  margin-top: 5vh;
+  color: #dedede;
   font-size: 14px;
-  letter-spacing: 2px;
-  color: #f5f4f1;
-  font-style: normal;
-  text-transform: uppercase;
+  max-width: 49em;
+  font-style: bolder;
+}
+.privacy-policy .own-policy .text-href {
+  color: #fdfdfd;
 }
 
-@media (max-width: 1200px) {
-  .img-sec {
-    padding: 100px 0;
-  }
-  .img-content .img-text {
-    font-size: 34px;
-    max-width: 700px;
-  }
-}
-@media (max-width: 900px) {
-  .img-sec {
-    padding: 70px 0;
-    min-height: 400px;
-    background-attachment: scroll;
-  }
-  .img-content .img-text {
-    font-size: 24px;
-    line-height: 1.5;
-    max-width: 100%;
-  }
-  .img-content .quote-author {
-    font-size: 12px;
-  }
-}
-@media (max-width: 480px) {
-  .img-sec {
-    padding: 50px 0;
-    min-height: 350px;
-  }
-  .img-content .quote-author {
-    font-size: 20px;
-  }
-}
 .footer {
   background-color: #fff;
   color: #000;
   padding: 60px 24px 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 1px solid var(--line);
 }
 .footer .footer-top {
   max-width: 1200px;
@@ -379,11 +273,6 @@ body {
   height: auto;
   display: block;
 }
-.footer .footer-top .footer-brand .footer-tagline {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #000;
-}
 .footer .footer-top .footer-links {
   display: flex;
   gap: 70px;
@@ -391,17 +280,12 @@ body {
 }
 .footer .footer-top .footer-info .footer-label {
   display: block;
-  font-family: "Poppins", sans-serif;
+  font-family: "Arimo", sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 16px;
-}
-.footer .footer-top .footer-info .footer-text {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #000;
 }
 .footer .footer-top .footer-info .footer-socials {
   display: flex;
@@ -430,7 +314,7 @@ body {
   align-items: center;
   gap: 40px;
   padding-top: 26px;
-  border-top: 1px solid #000;
+  border-top: -1px solid #000;
   flex-wrap: wrap;
 }
 .footer .footer-bottom .footer-link {
@@ -472,4 +356,4 @@ body {
     flex-direction: column;
     gap: 24px;
   }
-}/*# sourceMappingURL=service.css.map */
+}/*# sourceMappingURL=privacy.css.map */
