@@ -96,24 +96,30 @@ body {
     width: 100%;
     z-index: 3;
     padding: 24px 70px;
+    // font-family: $project-fonts;
+
     .nav-link {
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        align-items: center;
         gap: 8px;
+
         .logo-img {
             width: 15rem;
-            height: 65px;
+            height: 63px;
         }
+
         .hed-link {
             display: flex;
             gap: 40px;
             list-style: none;
+
             .link {
-                color: white;
+                color: $white;
                 text-decoration: none;
                 font-size: 17px;
                 margin-left: 45px;
+
                 &.link-active {
                     text-decoration: underline;
                     text-underline-offset: .7px;
@@ -127,41 +133,185 @@ body {
     }
 }
 
-
 #burger-toggle {
     display: none;
 }
 
 .burger {
     display: none;
+    position: relative;
     width: 35px;
+    height: 24px;
     cursor: pointer;
     z-index: 10;
+
     span {
         display: block;
         height: 3px;
         width: 100%;
-        background: white;
+        background: $white;
         margin: 7px 0;
         transition: .3s;
+        transform-origin: center;
     }
 }
-// Responsive Header 
+
+#burger-toggle:checked ~ .burger {
+    span {
+        &:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+}
+
+
 @media ( max-width: 1024px ) {
     .header {
         padding: 20px 30px;
+
         .nav-link {
             .logo-img {
                 width: 11rem;
                 height: auto;
             }
+        }
+    }
+}
+
+@media ( max-width: 900px ) {
+    .burger {
+        display: block;
+    }
+
+    .header {
+        .nav-link {
+            position: relative;
+
             .hed-link {
-                gap: 15px;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 320px;
+                height: 100vh;
+                background: $bg;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 0;
+                padding: 100px 40px;
+                transition: right .4s cubic-bezier(.25, .1, .25, .1);
+                box-shadow: -4px 0 20px rgba(0, 0, 0, .3);
+
                 .link {
-                    font-size: 15px;
-                    margin-left: 15px;
+                    margin-left: 0;
+                    margin-bottom: 32px;
+                    font-size: 20px;
                 }
             }
+        }
+    }
+    #burger-toggle:checked ~ .nav-link .hed-link {
+        right: 0;
+    }
+}
+
+@media ( max-width: 768px ) {
+    .header {
+        padding: 18px 24px;
+
+        .nav-link {
+            .logo-img {
+                width: 9rem;
+            }
+        }
+    }
+}
+
+@media ( max-width: 600px ) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .burger {
+        width: 30px;
+        height: 20px;
+
+        span {
+            margin: 6px 0;
+        }
+    }
+
+    .header {
+        .nav-link {
+            .logo-img {
+                width: 8rem;
+            }
+            .hed-link {
+                width: 80%;
+                padding: 90px 30px;
+
+                .link {
+                    font-size: 18px;
+                    margin-bottom: 26px;
+                }
+            }
+        }
+    }
+}
+
+@media ( max-width: 480px ) {
+    .header {
+        padding: 14px 16px;
+
+        .nav-link {
+            .logo-img {
+                width: 7rem;
+            }
+        }
+    }
+}
+
+@media ( max-width: 375px ) {
+    .header {
+        .nav-link {
+            .hed-link {
+                width: 100%;
+                max-width: none;
+                padding: 80px 24px;
+
+                .link {
+                    font-size: 16px;
+                    margin-bottom: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media ( max-width: 320px ) {
+    .header {
+        padding: 12px 14px;
+
+        .nav-link {
+            .logo-img {
+                width: 6rem;
+            }
+        }
+    }
+
+    .burger {
+        width: 26px;
+        height: 18px;
+
+        span {
+            margin: 5px 0;
         }
     }
 }
