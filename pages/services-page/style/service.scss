@@ -123,6 +123,7 @@ body {
     }
 }
 
+// Responsive Header
 
 @media ( max-width: 1024px ) {
     .header {
@@ -140,36 +141,44 @@ body {
 @media ( max-width: 900px ) {
     .burger {
         display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 20;
     }
 
     .header {
+        padding-right: 80px;
+
         .nav-link {
             position: relative;
+            width: 100%;
 
             .hed-link {
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 70%;
-                max-width: 320px;
+                width: min(80%, 320px);
                 height: 100vh;
                 background: $bg;
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
                 gap: 0;
-                padding: 100px 40px;
+                padding: 100px 30px 40px;
                 transition: right .4s cubic-bezier(.25, .1, .25, .1);
                 box-shadow: -4px 0 20px rgba(0, 0, 0, .3);
+                z-index: 15;
 
                 .link {
                     margin-left: 0;
-                    margin-bottom: 32px;
+                    margin-bottom: 24px;
                     font-size: 20px;
                 }
             }
         }
     }
+
     #burger-toggle:checked ~ .nav-link .hed-link {
         right: 0;
     }
@@ -195,6 +204,8 @@ body {
     .burger {
         width: 30px;
         height: 20px;
+        top: 16px;
+        right: 16px;
 
         span {
             margin: 6px 0;
@@ -202,17 +213,19 @@ body {
     }
 
     .header {
+        padding-right: 70px;
+
         .nav-link {
             .logo-img {
                 width: 8rem;
             }
             .hed-link {
-                width: 80%;
-                padding: 90px 30px;
+                width: min(85%, 320px);
+                padding: 90px 24px 30px;
 
                 .link {
                     font-size: 18px;
-                    margin-bottom: 26px;
+                    margin-bottom: 22px;
                 }
             }
         }
@@ -222,6 +235,7 @@ body {
 @media ( max-width: 480px ) {
     .header {
         padding: 14px 16px;
+        padding-right: 64px;
 
         .nav-link {
             .logo-img {
@@ -233,15 +247,17 @@ body {
 
 @media ( max-width: 375px ) {
     .header {
+        padding-right: 60px;
+
         .nav-link {
             .hed-link {
                 width: 100%;
                 max-width: none;
-                padding: 80px 24px;
+                padding: 80px 20px 24px;
 
                 .link {
                     font-size: 16px;
-                    margin-bottom: 22px;
+                    margin-bottom: 20px;
                 }
             }
         }
@@ -268,8 +284,6 @@ body {
         }
     }
 }
-
-// Responsive Header
 
 @media ( max-width: 1024px ) {
     .header {
@@ -361,8 +375,150 @@ body {
     }
 }
 
-// Service Section - Responsive-ს ვერ ვაკეთებ (Myb Bugs 
+// Service Section - Responsive
 
+@media (max-width: 1440px) {
+    .services {
+        .ser-section {
+            .services-grid {
+                max-width: 950px;
+                column-gap: 40px;
+                row-gap: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .services {
+        .ser-section {
+            padding: 0 16px;
+
+            .services-header {
+                width: 100%;
+
+                .services-title {
+                    font-size: 34px;
+                    max-width: 100%;
+                }
+            }
+
+            .services-grid {
+                column-gap: 24px;
+                row-gap: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        .ser-section {
+            .services-header {
+                .services-label {
+                    font-size: 13px;
+                    margin-left: 0;
+                }
+                .services-title {
+                    font-size: 28px;
+                    margin-left: 0;
+                }
+                .arrow {
+                    margin-left: 0;
+                    margin-top: 24px;
+                    width: 50px;
+                    height: 28px;
+                }
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                margin-left: 0;
+                column-gap: 20px;
+                row-gap: 35px;
+
+                .number {
+                    font-size: 32px;
+                    margin-top: 20px;
+                }
+                .title {
+                    font-size: 14px;
+                }
+                .text {
+                    font-size: 13.5px;
+                    max-width: 100%;
+                    max-height: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        padding: 32px 0;
+
+        .ser-section {
+            padding: 0 12px;
+
+            .services-header {
+                .services-label {
+                    font-size: 12px;
+                    margin-bottom: 14px;
+                }
+                .services-title {
+                    font-size: 20px;
+                    letter-spacing: normal;
+                }
+                .arrow {
+                    width: 40px;
+                    height: 24px;
+                    margin-top: 14px;
+                }
+            }
+
+            .services-grid {
+                row-gap: 26px;
+
+                .number {
+                    font-size: 26px;
+                    margin-top: 14px;
+                }
+                .title {
+                    font-size: 13px;
+                }
+                .text {
+                    font-size: 12.5px;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .services {
+        .ser-section {
+            .services-header {
+                .services-title {
+                    font-size: 18px;
+                }
+            }
+
+            .services-grid {
+                .number {
+                    font-size: 22px;
+                }
+                .title {
+                    font-size: 12px;
+                }
+                .text {
+                    font-size: 11.5px;
+                }
+            }
+        }
+    }
+}
 
 // IMG SECTION
 .img-sec {

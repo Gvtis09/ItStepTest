@@ -152,31 +152,38 @@ body {
 @media ( max-width: 900px ) {
     .burger {
         display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 20;
     }
 
     .header {
+        padding-right: 80px;
+
         .nav-link {
             position: relative;
+            width: 100%;
 
             .hed-link {
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 70%;
-                max-width: 320px;
+                width: min(80%, 320px);
                 height: 100vh;
                 background: $bg;
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
                 gap: 0;
-                padding: 100px 40px;
+                padding: 100px 30px 40px;
                 transition: right .4s cubic-bezier(.25, .1, .25, .1);
                 box-shadow: -4px 0 20px rgba(0, 0, 0, .3);
+                z-index: 15;
 
                 .link {
                     margin-left: 0;
-                    margin-bottom: 32px;
+                    margin-bottom: 24px;
                     font-size: 20px;
                 }
             }
@@ -208,6 +215,8 @@ body {
     .burger {
         width: 30px;
         height: 20px;
+        top: 16px;
+        right: 16px;
 
         span {
             margin: 6px 0;
@@ -215,17 +224,19 @@ body {
     }
 
     .header {
+        padding-right: 70px;
+
         .nav-link {
             .logo-img {
                 width: 8rem;
             }
             .hed-link {
-                width: 80%;
-                padding: 90px 30px;
+                width: min(85%, 320px);
+                padding: 90px 24px 30px;
 
                 .link {
                     font-size: 18px;
-                    margin-bottom: 26px;
+                    margin-bottom: 22px;
                 }
             }
         }
@@ -235,6 +246,7 @@ body {
 @media ( max-width: 480px ) {
     .header {
         padding: 14px 16px;
+        padding-right: 64px;
 
         .nav-link {
             .logo-img {
@@ -246,21 +258,22 @@ body {
 
 @media ( max-width: 375px ) {
     .header {
+        padding-right: 60px;
+
         .nav-link {
             .hed-link {
                 width: 100%;
                 max-width: none;
-                padding: 80px 24px;
+                padding: 80px 20px 24px;
 
                 .link {
                     font-size: 16px;
-                    margin-bottom: 22px;
+                    margin-bottom: 20px;
                 }
             }
         }
     }
 }
-
 
 @media ( max-width: 320px ) {
     .header {
@@ -279,6 +292,25 @@ body {
 
         span {
             margin: 5px 0;
+        }
+    }
+}
+
+@media ( max-width: 1024px ) {
+    .header {
+        padding: 20px 30px;
+        .nav-link {
+            .logo-img {
+                width: 11rem;
+                height: auto;
+            }
+            .hed-link {
+                gap: 15px;
+                .link {
+                    font-size: 15px;
+                    margin-left: 15px;
+                }
+            }
         }
     }
 }

@@ -121,29 +121,37 @@ body {
 @media (max-width: 900px) {
   .burger {
     display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+  }
+  .header {
+    padding-right: 80px;
   }
   .header .nav-link {
     position: relative;
+    width: 100%;
   }
   .header .nav-link .hed-link {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
-    max-width: 320px;
+    width: min(80%, 320px);
     height: 100vh;
     background: #0a0a0a;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 0;
-    padding: 100px 40px;
+    padding: 100px 30px 40px;
     transition: right 0.4s cubic-bezier(0.25, 0.1, 0.25, 0.1);
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 15;
   }
   .header .nav-link .hed-link .link {
     margin-left: 0;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     font-size: 20px;
   }
   #burger-toggle:checked ~ .nav-link .hed-link {

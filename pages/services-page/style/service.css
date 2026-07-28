@@ -99,29 +99,37 @@ body {
 @media (max-width: 900px) {
   .burger {
     display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+  }
+  .header {
+    padding-right: 80px;
   }
   .header .nav-link {
     position: relative;
+    width: 100%;
   }
   .header .nav-link .hed-link {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
-    max-width: 320px;
+    width: min(80%, 320px);
     height: 100vh;
     background: #0a0a0a;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 0;
-    padding: 100px 40px;
+    padding: 100px 30px 40px;
     transition: right 0.4s cubic-bezier(0.25, 0.1, 0.25, 0.1);
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 15;
   }
   .header .nav-link .hed-link .link {
     margin-left: 0;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     font-size: 20px;
   }
   #burger-toggle:checked ~ .nav-link .hed-link {
@@ -143,39 +151,48 @@ body {
   .burger {
     width: 30px;
     height: 20px;
+    top: 16px;
+    right: 16px;
   }
   .burger span {
     margin: 6px 0;
+  }
+  .header {
+    padding-right: 70px;
   }
   .header .nav-link .logo-img {
     width: 8rem;
   }
   .header .nav-link .hed-link {
-    width: 80%;
-    padding: 90px 30px;
+    width: min(85%, 320px);
+    padding: 90px 24px 30px;
   }
   .header .nav-link .hed-link .link {
     font-size: 18px;
-    margin-bottom: 26px;
+    margin-bottom: 22px;
   }
 }
 @media (max-width: 480px) {
   .header {
     padding: 14px 16px;
+    padding-right: 64px;
   }
   .header .nav-link .logo-img {
     width: 7rem;
   }
 }
 @media (max-width: 375px) {
+  .header {
+    padding-right: 60px;
+  }
   .header .nav-link .hed-link {
     width: 100%;
     max-width: none;
-    padding: 80px 24px;
+    padding: 80px 20px 24px;
   }
   .header .nav-link .hed-link .link {
     font-size: 16px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -279,6 +296,115 @@ body {
   max-height: 50px;
 }
 
+@media (max-width: 1440px) {
+  .services .ser-section .services-grid {
+    max-width: 950px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    row-gap: 60px;
+  }
+}
+@media (max-width: 900px) {
+  .services .ser-section {
+    padding: 0 16px;
+  }
+  .services .ser-section .services-header {
+    width: 100%;
+  }
+  .services .ser-section .services-header .services-title {
+    font-size: 34px;
+    max-width: 100%;
+  }
+  .services .ser-section .services-grid {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    row-gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .services .ser-section .services-header .services-label {
+    font-size: 13px;
+    margin-left: 0;
+  }
+  .services .ser-section .services-header .services-title {
+    font-size: 28px;
+    margin-left: 0;
+  }
+  .services .ser-section .services-header .arrow {
+    margin-left: 0;
+    margin-top: 24px;
+    width: 50px;
+    height: 28px;
+  }
+  .services .ser-section .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 35px;
+  }
+  .services .ser-section .services-grid .number {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  .services .ser-section .services-grid .title {
+    font-size: 14px;
+  }
+  .services .ser-section .services-grid .text {
+    font-size: 13.5px;
+    max-width: 100%;
+    max-height: none;
+  }
+}
+@media (max-width: 480px) {
+  .services {
+    padding: 32px 0;
+  }
+  .services .ser-section {
+    padding: 0 12px;
+  }
+  .services .ser-section .services-header .services-label {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+  .services .ser-section .services-header .services-title {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+  .services .ser-section .services-header .arrow {
+    width: 40px;
+    height: 24px;
+    margin-top: 14px;
+  }
+  .services .ser-section .services-grid {
+    row-gap: 26px;
+  }
+  .services .ser-section .services-grid .number {
+    font-size: 26px;
+    margin-top: 14px;
+  }
+  .services .ser-section .services-grid .title {
+    font-size: 13px;
+  }
+  .services .ser-section .services-grid .text {
+    font-size: 12.5px;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 375px) {
+  .services .ser-section .services-header .services-title {
+    font-size: 18px;
+  }
+  .services .ser-section .services-grid .number {
+    font-size: 22px;
+  }
+  .services .ser-section .services-grid .title {
+    font-size: 12px;
+  }
+  .services .ser-section .services-grid .text {
+    font-size: 11.5px;
+  }
+}
 .img-sec {
   position: relative;
   background: url("../../../img/sectionbg.avif");

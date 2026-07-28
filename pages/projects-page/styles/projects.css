@@ -40,7 +40,7 @@ body {
   display: block;
   background: transparent;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 .header .nav-link .hed-link {
   display: flex;
@@ -106,29 +106,37 @@ body {
 @media (max-width: 900px) {
   .burger {
     display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+  }
+  .header {
+    padding-right: 80px;
   }
   .header .nav-link {
     position: relative;
+    width: 100%;
   }
   .header .nav-link .hed-link {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
-    max-width: 320px;
+    width: min(80%, 320px);
     height: 100vh;
     background: #0a0a0a;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 0;
-    padding: 100px 40px;
+    padding: 100px 30px 40px;
     transition: right 0.4s cubic-bezier(0.25, 0.1, 0.25, 0.1);
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 15;
   }
   .header .nav-link .hed-link .link {
     margin-left: 0;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     font-size: 20px;
   }
   #burger-toggle:checked ~ .nav-link .hed-link {
@@ -150,39 +158,48 @@ body {
   .burger {
     width: 30px;
     height: 20px;
+    top: 16px;
+    right: 16px;
   }
   .burger span {
     margin: 6px 0;
+  }
+  .header {
+    padding-right: 70px;
   }
   .header .nav-link .logo-img {
     width: 8rem;
   }
   .header .nav-link .hed-link {
-    width: 80%;
-    padding: 90px 30px;
+    width: min(85%, 320px);
+    padding: 90px 24px 30px;
   }
   .header .nav-link .hed-link .link {
     font-size: 18px;
-    margin-bottom: 26px;
+    margin-bottom: 22px;
   }
 }
 @media (max-width: 480px) {
   .header {
     padding: 14px 16px;
+    padding-right: 64px;
   }
   .header .nav-link .logo-img {
     width: 7rem;
   }
 }
 @media (max-width: 375px) {
+  .header {
+    padding-right: 60px;
+  }
   .header .nav-link .hed-link {
     width: 100%;
     max-width: none;
-    padding: 80px 24px;
+    padding: 80px 20px 24px;
   }
   .header .nav-link .hed-link .link {
     font-size: 16px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -198,6 +215,22 @@ body {
   }
   .burger span {
     margin: 5px 0;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px 30px;
+  }
+  .header .nav-link .logo-img {
+    width: 11rem;
+    height: auto;
+  }
+  .header .nav-link .hed-link {
+    gap: 15px;
+  }
+  .header .nav-link .hed-link .link {
+    font-size: 15px;
+    margin-left: 15px;
   }
 }
 .text-section {
