@@ -68,6 +68,9 @@ body {
         .logo-img {
             width: 15rem;
             height: 63px;
+            display: block;
+            background: transparent;
+            object-fit: contain;
         }
 
         .hed-link {
@@ -117,7 +120,7 @@ body {
     }
 }
 
-// burger → X ანიმაცია, checkbox checked-ზე
+
 #burger-toggle:checked ~ .burger {
     span {
         &:nth-child(1) {
@@ -132,9 +135,6 @@ body {
     }
 }
 
-// ==========================================================
-// RESPONSIVE HEADER — Desktop-დან iPhone 5s-მდე
-// ==========================================================
 
 @media ( max-width: 1024px ) {
     .header {
@@ -149,7 +149,6 @@ body {
     }
 }
 
-// Tablet portrait / mobile — ბურგერ მენიუს გამოჩენა (900px)
 @media ( max-width: 900px ) {
     .burger {
         display: block;
@@ -184,7 +183,6 @@ body {
         }
     }
 
-    // checked → მენიუ ეკრანზე შემოდის
     #burger-toggle:checked ~ .nav-link .hed-link {
         right: 0;
     }
@@ -263,7 +261,7 @@ body {
     }
 }
 
-// Extra small mobile (320px) — iPhone 5 / 5s / SE (1st gen)
+
 @media ( max-width: 320px ) {
     .header {
         padding: 12px 14px;
@@ -637,7 +635,7 @@ body {
         column-gap: 44px;
     }
 }
-  .f-card {
+.f-card {
         break-inside: avoid;
         margin-bottom: 64px;
     }
@@ -646,7 +644,7 @@ body {
         margin-bottom: 22px;
         background: #f2f1ee;
     }
-    img {
+    .f-card .f-img-wrap img {
         width: 100%;
         display: block;
         object-fit: cover;
@@ -654,9 +652,9 @@ body {
         transform: scale(1);
         transition: transform .6s cubic-bezier(.25, .1, .25, .1);
         will-change: transform;
-        background: #f2f1ee;
+        background: transparent;
     }
-    &:hover .f-img-wrap img {
+    .f-card:hover .f-img-wrap img {
         transform: scale(1.08);
     }
     &.f-card--tall img { height: 600px; }
@@ -680,6 +678,7 @@ body {
         margin: 0;
         max-width: 420px;
     }
+
 // Responsive Featured
 @media (max-width: 1440px) {
     .featured {
@@ -906,6 +905,8 @@ body {
                 width: 10rem;
                 height: auto;
                 display: block;
+                background: transparent;
+                object-fit: contain;
             }
             
         }

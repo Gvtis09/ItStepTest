@@ -28,35 +28,6 @@ $breakpoint-tablet: 900px;
     --line: #111111
 }
 
-// Mixins
-
-@mixin eyebrow {
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: 500;
-    color: $white;
-    text-transform: uppercase;
-}
-
-@mixin body-copy ( $color: $muted ) {
-    font-size: 15px;
-    color: $color;
-    font-weight: 300;
-}
-
-@mixin flex-col( $gap: 0 ) {
-    display: flex;
-    flex-direction: column;
-    gap: $gap;
-}
-
-@mixin respond-to( $breakpoint ) {
-    @media ( max-width: $breakpoint ) {
-        @content;
-    }
-}
-
-
 // Reset
 
 * {
@@ -331,20 +302,24 @@ body {
     flex-direction: column;
     gap: 10px;
     padding: 47vh 0 30px 20px;
+
     .own-policy {
-        padding: 0vh 0 0 12vh;
+        padding: 0 0 0 12vh;
+
         .title-policy {
             font-size: 30px;
             line-height: 1.2;
             letter-spacing: .1em;
             font-family: $project-fonts;
         }
+
         .main-title {
             margin-top: 10vh;
             font-size: 21px;
             color: #fdfdfd;
             letter-spacing: .05em;
         }
+
         .last-title {
             margin-top: 5vh;
             color: #dedede;
@@ -352,17 +327,100 @@ body {
             max-width: 49em;
             font-style: bolder;
         }
+
         .text-href {
             color: #fdfdfd;
         }
     }
 }
 
+// Responsive
+
+@media (max-width: 1023px) {
+    .privacy-policy {
+        padding: 23vh 0 20px 15px;
+        gap: 8px;
+    }
+
+    .privacy-policy .own-policy {
+        padding: 0 0 0 5vh;
+    }
+
+    .privacy-policy .own-policy .title-policy {
+        font-size: 24px;
+        letter-spacing: .08em;
+    }
+
+    .privacy-policy .own-policy .main-title {
+        margin-top: 6vh;
+        font-size: 18px;
+        max-width: 40em;
+    }
+}
+
+@media (max-width: 767px) {
+    .privacy-policy .own-policy {
+        padding: 0 0 0 2vh;
+    }
+
+    .privacy-policy .own-policy .title-policy {
+        font-size: 20px;
+        letter-spacing: .06em;
+    }
+
+    .privacy-policy .own-policy .main-title {
+        margin-top: 5vh;
+        font-size: 16px;
+    }
+
+    .privacy-policy .own-policy .last-title {
+        margin-top: 2.5vh;
+        font-size: 12px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .privacy-policy {
+        padding: 14vh 0 15px 10px;
+    }
+
+    .privacy-policy .own-policy {
+        padding: 0;
+    }
+
+    .privacy-policy .own-policy .title-policy {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .privacy-policy .own-policy .main-title {
+        margin-top: 2vh;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 375px) {
+    .privacy-policy .own-policy .title-policy {
+        font-size: 16px;
+        letter-spacing: .04em;
+    }
+
+    .privacy-policy .own-policy .main-title {
+        font-size: 14px;
+    }
+
+    .privacy-policy .own-policy .last-title {
+        font-size: 10px;
+    }
+}
+
+// Footer
 .footer {
     background-color: #fff;
     color: $blk;
     padding: 60px 24px 30px;
-    border-top: 1px solid var(--line);
+    border-top: -1px solid var(--line);
     .footer-top {
         max-width: 1200px;
         margin: 0 auto;
