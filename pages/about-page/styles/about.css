@@ -401,6 +401,11 @@ body {
     padding: 70px 24px;
   }
 }
+.mission {
+  background: url("../../../img/Gettyimg.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .mission-grid {
   position: relative;

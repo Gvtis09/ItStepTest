@@ -505,6 +505,9 @@ body {
     @include respond-to($breakpoint-tablet) {
         padding: 70px $gap-sm;
     }
+    background: url("../../../img/Gettyimg.avif");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .mission-grid {
